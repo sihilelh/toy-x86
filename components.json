@@ -15,11 +15,13 @@
   "aliases": {
     "components": "@/components",
     "utils": "@/lib/shadcn.utils",
-    "ui": "@/components/atoms",
+    "ui": "@/components/ui",
     "lib": "@/lib",
     "hooks": "@/hooks"
   },
   "menuColor": "default",
   "menuAccent": "subtle",
-  "registries": {}
+  "registries": {
+    "@neobrutalism-base": "https://neobrutalism.com/r/base/{name}.json"
+  }
 }
