@@ -4,8 +4,18 @@ function pc_inc(reg: registerMap) {
   reg.set("pc", (reg.get("pc") as number) + 1);
 }
 
+function mov(opr: string[], mem: memoryBlock[], reg: registerMap) {
+  reg.set(opr[0], reg.get(opr[1]) as number);
+  pc_inc(reg);
+}
+
 function movv(opr: string[], mem: memoryBlock[], reg: registerMap) {
   reg.set(opr[0], parseInt(opr[1]));
+  pc_inc(reg);
+}
+
+function loadr(opr: string[], mem: memoryBlock[], reg: registerMap) {
+  reg.set(opr[0], mem[reg.get(opr[1]) as number] as number);
   pc_inc(reg);
 }
 
